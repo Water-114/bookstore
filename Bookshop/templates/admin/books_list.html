@@ -1,0 +1,72 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Sách{% endblock %}
+
+{% block content %}
+  <div class="admin-header">
+    <h1>Quản lý sách</h1>
+    <a href="{{ url_for('admin.book_new') }}" class="btn btn-primary">+ Thêm sách</a>
+  </div>
+
+  <form class="admin-toolbar" method="get">
+    <input type="search" name="q" value="{{ q }}" placeholder="Tìm theo tên hoặc tác giả...">
+    <select name="category" onchange="this.form.submit()">
+      <option value="">Tất cả danh mục</option>
+      {% for c in categories %}
+      <option value="{{ c.id }}" {{ 'selected' if selected_category == c.id else '' }}>{{ c.name }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-outline btn-sm">Lọc</button>
+  </form>
+
+  <div class="admin-table-wrap">
+    {% if books %}
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Sách</th>
+          <th>Danh mục</th>
+          <th>Năm XB</th>
+          <th>Giá</th>
+          <th>Kho</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for b in books %}
+        <tr>
+          <td class="title-cell">
+            <div class="admin-book-title">
+              {% if b.image %}
+              <img class="admin-thumb" src="{{ url_for('static', filename='images/products/' ~ b.image) }}" alt="">
+              {% endif %}
+              <span>{{ b.title }}<br><small>{{ b.author }}</small></span>
+            </div>
+          </td>
+          <td>{{ b.category_name }}</td>
+          <td>{{ b.publish_year or '—' }}</td>
+          <td>{{ b.price | vnd }}</td>
+          <td>
+            {% if b.in_stock %}
+            <span class="badge-stock in">Còn hàng</span>
+            {% else %}
+            <span class="badge-stock out">Hết hàng</span>
+            {% endif %}
+          </td>
+          <td>
+            <div class="admin-actions">
+              <a class="btn btn-outline btn-sm" href="{{ url_for('admin.book_edit', book_id=b.id) }}">Sửa</a>
+              <form method="post" action="{{ url_for('admin.book_delete', book_id=b.id) }}" onsubmit="return confirm('Xóa sách &quot;{{ b.title }}&quot;?');">
+                <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="admin-empty">Không tìm thấy sách phù hợp.</p>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Quản trị{% endblock %} — Book Corner Admin</title>
+<link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<div class="admin-topbar">
+  <div class="container">
+    <a href="{{ url_for('admin.dashboard') }}" class="brand">📚 Book Corner Admin</a>
+    <nav class="admin-nav">
+      <a href="{{ url_for('admin.books_list') }}" class="{{ 'active' if active == 'books' else '' }}">Sách</a>
+      <a href="{{ url_for('admin.categories_list') }}" class="{{ 'active' if active == 'categories' else '' }}">Danh mục</a>
+      <a href="{{ url_for('index') }}" class="admin-back">← Về trang web</a>
+    </nav>
+  </div>
+</div>
+
+<div class="admin-wrap">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="admin-flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Liên hệ — Book Corner{% endblock %}
+
+{% block content %}
+  <section class="page-banner">
+    <div class="container">
+      <h1>Liên hệ</h1>
+      <p>Book Corner luôn sẵn sàng lắng nghe bạn</p>
+    </div>
+  </section>
+
+  <section class="container section contact-layout">
+    <div class="contact-info">
+      <h2>Thông tin liên hệ</h2>
+      <ul>
+        <li>📍 <span><strong>Địa chỉ:</strong> 123 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</span></li>
+        <li>📞 <span><strong>Điện thoại:</strong> 0123 456 789</span></li>
+        <li>✉️ <span><strong>Email:</strong> contact@bookcorner.vn</span></li>
+        <li>🕒 <span><strong>Giờ mở cửa:</strong> 8:00 – 21:00, Thứ 2 – Chủ nhật</span></li>
+      </ul>
+
+      <div class="map-placeholder">
+        <div class="pin">📍</div>
+        <strong>Book Corner</strong>
+        <span>123 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</span>
+      </div>
+
+      <div class="social-links">
+        <a href="#" aria-label="Facebook" title="Facebook">📘</a>
+        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+        <a href="#" aria-label="Zalo" title="Zalo">💬</a>
+        <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2>Gửi phản hồi cho chúng tôi</h2>
+      <form id="feedbackForm" novalidate>
+        <div class="form-group">
+          <label for="fbName">Họ và tên *</label>
+          <input type="text" id="fbName" name="name">
+          <div class="field-error" id="fbName-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="fbEmail">Email *</label>
+          <input type="email" id="fbEmail" name="email">
+          <div class="field-error" id="fbEmail-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="fbPhone">Số điện thoại</label>
+          <input type="tel" id="fbPhone" name="phone" placeholder="Không bắt buộc">
+        </div>
+
+        <div class="form-group">
+          <label for="fbSubject">Chủ đề</label>
+          <select id="fbSubject" name="subject">
+            <option value="general">Góp ý chung</option>
+            <option value="order">Hỏi về đơn hàng</option>
+            <option value="book">Yêu cầu tìm sách</option>
+            <option value="complaint">Khiếu nại dịch vụ</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fbMessage">Nội dung *</label>
+          <textarea id="fbMessage" name="message" rows="5" placeholder="Bạn muốn chia sẻ điều gì với Book Corner?"></textarea>
+          <div class="field-error" id="fbMessage-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Gửi phản hồi</button>
+        <p class="form-message" id="formMessage" hidden></p>
+      </form>
+    </div>
+  </section>
+{% endblock %}

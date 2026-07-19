@@ -1,0 +1,44 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Danh mục{% endblock %}
+
+{% block content %}
+  <div class="admin-header">
+    <h1>Danh mục sách</h1>
+    <a href="{{ url_for('admin.category_new') }}" class="btn btn-primary">+ Thêm danh mục</a>
+  </div>
+
+  <div class="admin-table-wrap">
+    {% if categories %}
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên danh mục</th>
+          <th>Số sách</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in categories %}
+        <tr>
+          <td>{{ c.id }}</td>
+          <td class="title-cell">{{ c.name }}</td>
+          <td>{{ c.book_count }}</td>
+          <td>
+            <div class="admin-actions">
+              <a class="btn btn-outline btn-sm" href="{{ url_for('admin.category_edit', category_id=c.id) }}">Sửa</a>
+              <form method="post" action="{{ url_for('admin.category_delete', category_id=c.id) }}" onsubmit="return confirm('Xóa danh mục &quot;{{ c.name }}&quot;?');">
+                <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="admin-empty">Chưa có danh mục nào.</p>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}{{ 'Sửa danh mục' if not is_new else 'Thêm danh mục' }}{% endblock %}
+
+{% block content %}
+  <div class="admin-header">
+    <h1>{{ 'Sửa danh mục' if not is_new else 'Thêm danh mục mới' }}</h1>
+  </div>
+
+  <form class="admin-form" method="post">
+    <div class="form-group">
+      <label for="name">Tên danh mục *</label>
+      <input type="text" id="name" name="name" value="{{ category.name if category else '' }}" required autofocus>
+    </div>
+
+    <div class="admin-form-actions">
+      <button type="submit" class="btn btn-primary">{{ 'Lưu thay đổi' if not is_new else 'Thêm danh mục' }}</button>
+      <a href="{{ url_for('admin.categories_list') }}" class="btn btn-outline">Hủy</a>
+    </div>
+  </form>
+{% endblock %}

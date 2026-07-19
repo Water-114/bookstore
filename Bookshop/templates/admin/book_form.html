@@ -1,0 +1,56 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}{{ 'Sửa sách' if not is_new else 'Thêm sách' }}{% endblock %}
+
+{% block content %}
+  <div class="admin-header">
+    <h1>{{ 'Sửa thông tin sách' if not is_new else 'Thêm sách mới' }}</h1>
+  </div>
+
+  <form class="admin-form" method="post">
+    <div class="form-group">
+      <label for="title">Tên sách *</label>
+      <input type="text" id="title" name="title" value="{{ book.title }}" required autofocus>
+    </div>
+
+    <div class="form-group">
+      <label for="author">Tác giả *</label>
+      <input type="text" id="author" name="author" value="{{ book.author }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category_id">Danh mục *</label>
+      <select id="category_id" name="category_id" required>
+        <option value="">— Chọn danh mục —</option>
+        {% for c in categories %}
+        <option value="{{ c.id }}" {{ 'selected' if (book.category_id | string) == (c.id | string) else '' }}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="publish_year">Năm xuất bản</label>
+      <input type="number" id="publish_year" name="publish_year" value="{{ book.publish_year or '' }}">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Giá (₫) *</label>
+      <input type="number" id="price" name="price" min="0" step="1000" value="{{ book.price }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Tên tệp ảnh bìa</label>
+      <input type="text" id="image" name="image" placeholder="ten-anh-bia.jpg" value="{{ book.image or '' }}">
+    </div>
+
+    <div class="form-group admin-checkbox">
+      <input type="checkbox" id="in_stock" name="in_stock" {{ 'checked' if book.in_stock else '' }}>
+      <label for="in_stock">Còn hàng</label>
+    </div>
+
+    <div class="admin-form-actions">
+      <button type="submit" class="btn btn-primary">{{ 'Lưu thay đổi' if not is_new else 'Thêm sách' }}</button>
+      <a href="{{ url_for('admin.books_list') }}" class="btn btn-outline">Hủy</a>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,362 @@
+{
+  "categories": [
+    { "id": 1, "name": "Thiếu Nhi" },
+    { "id": 2, "name": "Văn Học" },
+    { "id": 3, "name": "Giáo Trình" },
+    { "id": 4, "name": "Khoa học Kỹ thuật" }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Búp Sen Xanh - Bìa Cứng - Tặng Kèm Obi + Postcard Hành Trình Cứu Nước - Độc Quyền Fahasa",
+      "author": "Sơn Tùng",
+      "year": 2025,
+      "categoryId": 1,
+      "price": 88000,
+      "rating": [],
+      "inStock": true,
+      "image": "untitled-2_1_33.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Tuổi Thơ Dữ Dội - Tập 1 (Tái Bản 2019)",
+      "author": "Phùng Quán",
+      "year": 2019,
+      "categoryId": 1,
+      "price": 60000,
+      "rating": [],
+      "inStock": true,
+      "image": "image_187162.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Búp Sen Xanh (Tái Bản 2020)",
+      "author": "Sơn Tùng",
+      "year": 2020,
+      "categoryId": 1,
+      "price": 61000,
+      "rating": [],
+      "inStock": true,
+      "image": "8935244826487.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tuổi Thơ Dữ Dội - Tập 2 (Tái Bản 2019)",
+      "author": "Phùng Quán",
+      "year": 2019,
+      "categoryId": 1,
+      "price": 60000,
+      "rating": [],
+      "inStock": true,
+      "image": "image_187163.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Lớp Học Mật Ngữ - Phiên Bản Mới - Tập 17 - Tặng Kèm Quà Tặng Ngẫu Nhiên",
+      "author": "B R O Group",
+      "year": 2026,
+      "categoryId": 1,
+      "price": 27000,
+      "rating": [],
+      "inStock": true,
+      "image": "mu_10.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Lớp Học Mật Ngữ - Phiên Bản Mới - Tập 18 - Tặng Kèm Quà Tặng Ngẫu Nhiên",
+      "author": "B R O Group",
+      "year": 2026,
+      "categoryId": 1,
+      "price": 27000,
+      "rating": [],
+      "inStock": true,
+      "image": "mu_11.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Combo Tuổi Thơ Dữ Dội - Tập 1 Và 2 (Tái Bản 2019) (Bộ 2 Tập)",
+      "author": "Phùng Quán",
+      "year": 2019,
+      "categoryId": 1,
+      "price": 117600,
+      "rating": [],
+      "inStock": true,
+      "image": "combo-8935244827972-8935244827989.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Tuổi Thơ Dữ Dội",
+      "author": "Phùng Quán",
+      "year": 2019,
+      "categoryId": 1,
+      "price": 0,
+      "rating": [],
+      "inStock": true,
+      "image": "image_187163.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Còn Chút Gì Để Nhớ (Tái Bản 2022)",
+      "author": "Nguyễn Nhật Ánh",
+      "year": 2022,
+      "categoryId": 2,
+      "price": 34000,
+      "rating": [],
+      "inStock": true,
+      "image": "8934974178590.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Hồ Điệp Và Kình Ngư",
+      "author": "Tuế Kiến",
+      "year": 2024,
+      "categoryId": 2,
+      "price": 116000,
+      "rating": [],
+      "inStock": true,
+      "image": "bia-2d_ho-diep-va-kinh-ngu_17307.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Cô Gái Đến Từ Hôm Qua (Tái Bản 2022)",
+      "author": "Nguyễn Nhật Ánh",
+      "year": 2022,
+      "categoryId": 2,
+      "price": 28000,
+      "rating": [],
+      "inStock": true,
+      "image": "8934974178583.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Hạ Đỏ (Tái Bản 2022)",
+      "author": "Nguyễn Nhật Ánh",
+      "year": 2022,
+      "categoryId": 2,
+      "price": 30000,
+      "rating": [],
+      "inStock": true,
+      "image": "8934974178613.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Đi Qua Hoa Cúc (Tái Bản 2022)",
+      "author": "Nguyễn Nhật Ánh",
+      "year": 2022,
+      "categoryId": 2,
+      "price": 32000,
+      "rating": [],
+      "inStock": true,
+      "image": "8934974178606.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Bộ Sách Quả Ngọt Năm Tháng - Tập 1 + Tập 2 (Bộ 2 Tập) - Tặng Kèm 2 Bookmark Cán Màng Lụa Ánh Ngọc Trai",
+      "author": "Mạch Ngôn Xuyên",
+      "year": 2025,
+      "categoryId": 2,
+      "price": 269000,
+      "rating": [],
+      "inStock": true,
+      "image": "banthuong_3.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Doraemon - Tiểu Thuyết - Nobita Và Lâu Đài Dưới Đáy Biển - Phiên Bản Mới",
+      "author": "Fujiko F Fujio, Isao Murayama, Tetsuo Yajima",
+      "year": 2024,
+      "categoryId": 2,
+      "price": 54000,
+      "rating": [],
+      "inStock": true,
+      "image": "tieu-thuyet-doraemon_nobita-va-lau-dai-duoi-day-bien-phien-ban-moi_bia.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Người Đàn Ông Mang Tên OVE (Tái Bản)",
+      "author": "Fredrik Backman",
+      "year": 2022,
+      "categoryId": 2,
+      "price": 128000,
+      "rating": [],
+      "inStock": true,
+      "image": "8934974182375.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Giáo Trình Chủ Nghĩa Xã Hội Khoa Học (Dành Cho Bậc Đại Học Hệ Không Chuyên Lý Luận Chính Trị)",
+      "author": "Bộ Giáo Dục Và Đào Tạo",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 43500,
+      "rating": [],
+      "inStock": true,
+      "image": "8935279162505.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Giáo Trình Lịch Sử Đảng Cộng Sản Việt Nam (Dành Cho Bậc Đại Học Hệ Không Chuyên Lý Luận Chính Trị)",
+      "author": "Bộ Giáo Dục Và Đào Tạo",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 63000,
+      "rating": [],
+      "inStock": true,
+      "image": "8935279167982.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Giáo Trình Triết Học Mác - Lênin (Dành Cho Bậc Đại Học Hệ Không Chuyên Lý Luận Chính Trị)",
+      "author": "Bộ Giáo Dục Và Đào Tạo",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 74000,
+      "rating": [],
+      "inStock": true,
+      "image": "8935279153367.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Kinh Tế Học Vĩ Mô",
+      "author": "N. Gregory Mankiw",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 244500,
+      "rating": [],
+      "inStock": true,
+      "image": "9786044872643_1_1.jpg"
+    },
+    {
+      "id": 21,
+      "title": "Kinh Tế Học Vi Mô",
+      "author": "N. Gregory Mankiw",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 227500,
+      "rating": [],
+      "inStock": true,
+      "image": "9786043388138_1_1_1_1.jpg"
+    },
+    {
+      "id": 22,
+      "title": "Kinh Tế Học Vĩ Mô (Tái Bản)",
+      "author": "N. Gregory Mankiw",
+      "year": 2026,
+      "categoryId": 3,
+      "price": 259200,
+      "rating": [],
+      "inStock": true,
+      "image": "9786044872643_1_1_1.jpg"
+    },
+    {
+      "id": 23,
+      "title": "Giáo Trình Marketing Quốc Tế (Tái Bản)",
+      "author": "Đinh Tiên Minh",
+      "year": 2023,
+      "categoryId": 3,
+      "price": 119000,
+      "rating": [],
+      "inStock": true,
+      "image": "9786043462029.jpg"
+    },
+    {
+      "id": 24,
+      "title": "Phân Tích Báo Cáo Tài Chính - Cẩm Nang Dành Cho Người Thực Hành",
+      "author": "Martin Fridson, Fernando Alvarez",
+      "year": 2024,
+      "categoryId": 3,
+      "price": 349000,
+      "rating": [],
+      "inStock": true,
+      "image": "9786047946655.jpg"
+    },
+    {
+      "id": 25,
+      "title": "Google Gemini Toàn Tập (Tái Bản 2026)",
+      "author": "Nguyễn Văn Lượng",
+      "year": 2026,
+      "categoryId": 4,
+      "price": 126000,
+      "rating": [],
+      "inStock": true,
+      "image": "25_9_1.jpg"
+    },
+    {
+      "id": 26,
+      "title": "Sao Chúng Ta Lại Ngủ - Why We Sleep",
+      "author": "Matthew Walker",
+      "year": 2019,
+      "categoryId": 4,
+      "price": 199000,
+      "rating": [],
+      "inStock": true,
+      "image": "biaao-01.jpg"
+    },
+    {
+      "id": 27,
+      "title": "Kỹ Thuật AI - Xây Dựng Ứng Dụng Với Mô Hình Nền Tảng",
+      "author": "Chip Huyen",
+      "year": 2025,
+      "categoryId": 4,
+      "price": 416000,
+      "rating": [],
+      "inStock": true,
+      "image": "z7331841143034_82f15b2774b7471db7b3f6bd9c75e521.jpg"
+    },
+    {
+      "id": 28,
+      "title": "Giải Phẫu Học Về Giãn Cơ - Giãn Cơ Để Tối Ưu Sức Mạnh Cơ Bắp - Stretching Anatomy (Tái Bản 2024)",
+      "author": "Arnold G Nelson, Jouko Kokkonen",
+      "year": 2024,
+      "categoryId": 4,
+      "price": 244000,
+      "rating": [],
+      "inStock": true,
+      "image": "8935077040036.jpg"
+    },
+    {
+      "id": 29,
+      "title": "Tăng Cường Tin Học Quốc Tế - IC3 GS6 Spark Level 1 - Dành Cho Lớp 3 (Tái Bản 2024)",
+      "author": "IIG Viet Nam",
+      "year": 2024,
+      "categoryId": 4,
+      "price": 64500,
+      "rating": [],
+      "inStock": true,
+      "image": "9786044834528-2_1.jpg"
+    },
+    {
+      "id": 30,
+      "title": "Lenormand Nhập Môn",
+      "author": "Rana George",
+      "year": 2025,
+      "categoryId": 4,
+      "price": 258000,
+      "rating": [],
+      "inStock": true,
+      "image": "9786326049145.jpg"
+    },
+    {
+      "id": 31,
+      "title": "Loãng Xương - Dịch Tễ Học, Chẩn Đoán, Quản Lý, Phòng Ngừa",
+      "author": "Nguyễn Văn Tuấn",
+      "year": 2026,
+      "categoryId": 4,
+      "price": 233100,
+      "rating": [],
+      "inStock": true,
+      "image": "z7838700438389_c581f7ab83d2420fa7153628c061c313.jpg"
+    },
+    {
+      "id": 32,
+      "title": "Tăng Cường Tin Học Quốc Tế - IC3 GS6 Spark Level 2 - Dành Cho Lớp 4 (Tái Bản 2023)",
+      "author": "IIG Viet Nam",
+      "year": 2023,
+      "categoryId": 4,
+      "price": 54000,
+      "rating": [],
+      "inStock": true,
+      "image": "9786045844052.jpg"
+    }
+  ]
+}

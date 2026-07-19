@@ -1,0 +1,22 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Tổng quan{% endblock %}
+
+{% block content %}
+  <div class="admin-header">
+    <h1>Tổng quan quản trị</h1>
+  </div>
+
+  <div class="category-grid">
+    <a class="category-card" href="{{ url_for('admin.books_list') }}">
+      <div class="icon">📖</div>
+      <h3>{{ book_count }} sách</h3>
+      <span>Quản lý sách</span>
+    </a>
+    <a class="category-card" href="{{ url_for('admin.categories_list') }}">
+      <div class="icon">🗂️</div>
+      <h3>{{ category_count }} danh mục</h3>
+      <span>Quản lý danh mục</span>
+    </a>
+  </div>
+{% endblock %}

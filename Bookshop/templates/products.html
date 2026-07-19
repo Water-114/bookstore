@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Sản phẩm — Book Corner{% endblock %}
+
+{% block content %}
+  <section class="page-banner">
+    <div class="container">
+      <h1>Sản phẩm</h1>
+      <p>Khám phá kho sách đa dạng tại Book Corner</p>
+    </div>
+  </section>
+
+  <section class="container section products-layout">
+    <aside class="filters">
+      <h3>Danh mục</h3>
+      <ul class="filter-list" id="categoryFilters"></ul>
+      <div>
+        <h3>Sắp xếp</h3>
+        <select id="sortSelect">
+          <option value="default">Mặc định</option>
+          <option value="newest">Mới nhất</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+        </select>
+      </div>
+    </aside>
+
+    <div class="products-main">
+      <div class="products-toolbar">
+        <input type="search" id="searchInput" placeholder="Tìm kiếm sách theo tên hoặc tác giả...">
+        <span id="resultCount"></span>
+      </div>
+      <div class="product-grid" id="productsGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Không tìm thấy sách phù hợp với lựa chọn của bạn.</p>
+    </div>
+  </section>
+{% endblock %}

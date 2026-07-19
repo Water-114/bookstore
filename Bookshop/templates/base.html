@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Book Corner — Cửa hàng sách online{% endblock %}</title>
+<link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Book Corner"></a>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('products') }}" class="{{ 'active' if active_page == 'products' else '' }}">Sản phẩm</a></li>
+        <li><a href="{{ url_for('contact') }}" class="{{ 'active' if active_page == 'contact' else '' }}">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+        🛒<span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" class="footer-logo" alt="Book Corner">
+      <p>Book Corner — Góc sách của bạn, nơi tri thức được lan tỏa.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Liên kết</h4>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('products') }}">Sản phẩm</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Danh mục</h4>
+      <ul id="footerCategories"></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <ul>
+        <li>📍 123 Nguyễn Trãi, Q.1, TP.HCM</li>
+        <li>📞 0123 456 789</li>
+        <li>✉️ contact@bookcorner.vn</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Book Corner. All rights reserved.</div>
+</footer>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-header">
+    <h3>Giỏ hàng của bạn</h3>
+    <button id="cartCloseBtn" aria-label="Đóng giỏ hàng">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Tổng cộng</span><span id="cartTotal">0₫</span></div>
+    <button class="btn btn-outline btn-block" id="cartClearBtn">Xóa hết giỏ hàng</button>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
