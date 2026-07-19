@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Book Corner — Cửa hàng sách online{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="carousel" id="heroCarousel">
+      <div class="carousel-track" id="carouselTrack"></div>
+      <button class="carousel-arrow prev" id="carouselPrev" aria-label="Slide trước">&#10094;</button>
+      <button class="carousel-arrow next" id="carouselNext" aria-label="Slide sau">&#10095;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-header">
+      <h2>Sản phẩm mới nhất</h2>
+      <a href="{{ url_for('products') }}" class="see-more">Xem tất cả &rarr;</a>
+    </div>
+    <div class="product-grid" id="latestProducts"></div>
+  </section>
+
+  <section class="container section">
+    <div class="section-header">
+      <h2>Danh mục nổi bật</h2>
+    </div>
+    <div class="category-grid" id="categoryHighlight"></div>
+  </section>
+{% endblock %}
